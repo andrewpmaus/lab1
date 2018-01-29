@@ -20,5 +20,7 @@ void setup() {
 // the loop routine runs over and over again forever:
 void loop() {
   val = analogRead(A0);
+  Serial.print("The pot is: ");
+  Serial.println(val);
   analogWrite(LED_R, val/4);   // turn the LED on (HIGH is the voltage level)               // wait for a second
 }
