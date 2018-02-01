@@ -17,11 +17,11 @@ while True:	#infinite loop
 # l is currently formatted: "R,G,B"
 # This is a string that our computer can't read
   colors = l.rstrip().split(",")	# turns the string into a list
-  rgb = [int(color) for color in colors]
+  rgb = [int(color) for color in colors] # 
 
   DISPLAYSURF.fill(rgb)
 
-  for event in pygame.event.get():
+  for event in pygame.event.get(): # 
     if event.type == QUIT:
       pygame.quit()
       sys.exit()

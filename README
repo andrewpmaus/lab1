@@ -1,0 +1,44 @@
+
+----LAB 1: RGB LED and Screen ----
+This project is able to control the colors of an RGB LED and a PYGAME window with a joystick and potentiometer.
+
+PARTS LIST:
+- Arduino UNO
+- Joystick
+- Rotary Potentiometer
+- RGB LED
+- Computer with pygame and Arduino IDE installed
+- Breadboard
+
+WIRING:
+
+Arduino: USB ---> Computer
+	 A0 ----> VRy (Joystick)
+	 A1 ----> Variable Voltage (Middle Pin of Rotary Potentiometer)
+	 A2 ----> VRx (Joystick)
+	 ~6 ----> R (RGB LED)
+	 ~5 ----> G (RGB LED)
+	 ~3 ----> B (RGB LED)
+	 GND ---> Ground Bus (Breadboard)
+	 5V ----> Power Bus (Breadboard)
+
+Joystick: GND --> Ground Bus (Breadboard)
+	  +5V --> Power Bus (Breadboard)
+	  VRx --> A2 (Arduino)
+	  VRy --> A0 (Arduino)
+	  SW ---> Do Not Connect (DNC)
+
+Rotary Pot: Connect one outside pin to the Power Bus and the other outside pin to the Ground Bus. Which one you choose does not matter.
+   Middle Pin --> A1 (Arduino)
+
+RGB LED: R -----> ~6 (Arduino)
+    	 G -----> ~5 (Arduino)
+	 B -----> ~3 (Arduino)
+	 _ -----> Ground Bus (Breadboard)
+
+SOFTWARE:
+- rgb_controller.ino
+- rgb.py
+
+  Directions: Flash rgb_controller.ino onto the Arduino first. You should be able to adjust the color of the RGB LED by moving the joystick or the rotary potentiometer. Once you are successfully able to change those colors, run rgb.py on your computer. A new window should pop up with the color in the window matching the color of the LED. Any movement of the joystick or pot will change the color of the LED and the window simultaneously.
+
